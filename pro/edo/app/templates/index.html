@@ -1,0 +1,703 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Builderz - Construction Company Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Construction Company Website Template" name="keywords">
+        <meta content="Construction Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="/static/css/style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   <style>
+    /*******************************/
+    /********* Footer CSS **********/
+    /*******************************/
+    .footer {
+        position: relative;
+        margin-top: 45px;
+        padding-top: 90px;
+        background: #030f27;
+        color: #ffffff;
+    }
+    
+    .footer .footer-contact,
+    .footer .footer-link,
+    .footer .newsletter {
+        position: relative;
+        margin-bottom: 45px;
+    }
+    
+    .footer h2 {
+        position: relative;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fdbe33;
+    }
+    
+    .footer h2::after {
+        position: absolute;
+        content: "";
+        width: 60px;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        background: #fdbe33;
+    }
+    
+    .footer .footer-link a {
+        display: block;
+        margin-bottom: 10px;
+        color: #ffffff;
+        transition: .3s;
+    }
+    
+    .footer .footer-link a::before {
+        position: relative;
+        content: "\f105";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 10px;
+    }
+    
+    .footer .footer-link a:hover {
+        color: #fdbe33;
+        letter-spacing: 1px;
+    }
+    
+    .footer .footer-contact p i {
+        width: 25px;
+    }
+    
+    .footer .footer-social {
+        position: relative;
+        margin-top: 20px;
+    }
+    
+    .footer .footer-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        padding: 7px 0;
+        text-align: center;
+        border: 1px solid rgba(256, 256, 256, .3);
+        border-radius: 60px;
+        transition: .3s;
+    }
+    
+    .footer .footer-social a i {
+        font-size: 15px;
+        color: #ffffff;
+    }
+    
+    .footer .footer-social a:hover {
+        background: #fdbe33;
+        border-color: #fdbe33;
+    }
+    
+    .footer .footer-social a:hover i {
+        color: #030f27;
+    }
+    
+    .footer .newsletter .form {
+        position: relative;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .footer .newsletter input {
+        height: 50px;
+        border: 2px solid #121518;
+        border-radius: 0;
+    }
+    
+    .footer .newsletter .btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 40px;
+        padding: 8px 10px;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fdbe33;
+        background: #121518;
+        border-radius: 0;
+        border: 2px solid #fdbe33;
+        transition: .3s;
+    }
+    
+    .footer .newsletter .btn:hover {
+        color: #121518;
+        background: #fdbe33;
+    }
+    
+    .footer .footer-menu .f-menu {
+        position: relative;
+        padding: 15px 0;
+        font-size: 0;
+        text-align: center;
+        border-top: 1px solid rgba(256, 256, 256, .1);
+        border-bottom: 1px solid rgba(256, 256, 256, .1);
+    }
+    
+    .footer .footer-menu .f-menu a {
+        color: #ffffff;
+        font-size: 16px;
+        margin-right: 15px;
+        padding-right: 15px;
+        border-right: 1px solid rgba(255, 255, 255, .1);
+    }
+    
+    .footer .footer-menu .f-menu a:hover {
+        color: #fdbe33;
+    }
+    
+    .footer .footer-menu .f-menu a:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+    }
+    
+    
+    .footer .copyright {
+        padding: 30px 15px;
+    }
+    
+    .footer .copyright p {
+        margin: 0;
+        color: #ffffff;
+    }
+    
+    .footer .copyright .col-md-6:last-child p {
+        text-align: right;
+    }
+    
+    .footer .copyright p a {
+        color: #fdbe33;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .footer .copyright p a:hover {
+        color: #ffffff;
+    }
+    
+    @media (max-width: 768px) {
+        .footer .copyright p,
+        .footer .copyright .col-md-6:last-child p {
+            margin: 5px 0;
+            text-align: center;
+        }
+    }
+    </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Top Bar Start -->
+            <div class="top-bar">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <h1>Builderz</h1>
+                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-calendar"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3>Opening Hour</h3>
+                                            <p>Mon - Fri, 8:00 - 9:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-call"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3>Call Us</h3>
+                                            <p>+91 9383 7382 93</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-send-mail"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3>Email Us</h3>
+                                            <p>Builderz@example.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- Nav Bar Start -->
+            <div class="nav-bar">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                        <a href="#" class="navbar-brand">MENU</a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto">
+                                <a href="/app/" class="nav-item nav-link">Home</a>
+                                <a href="/app/about/" class="nav-item nav-link">About</a>
+                                <a href="/app/service/" class="nav-item nav-link active">Service</a>
+                                
+                                <a href="/app/cont/" class="nav-item nav-link">Contact</a>
+                            </div>
+                            <div class="ml-auto">
+                                <a class="btn" href="/app/login/">Login</a>
+                            </div>
+                            <div class="ml-auto">
+                                <a class="btn" href="/app/reg/">REGISTER</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Nav Bar End -->
+
+
+            <!-- Carousel Start -->
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/static/img/carousel-1.jpg" alt="Carousel Image">
+                        <div class="carousel-caption">
+                            <p class="animated fadeInRight">We Are Professional</p>
+                            <h1 class="animated fadeInLeft">For Your Dream Project</h1>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/static/img/carousel-2.jpg" alt="Carousel Image">
+                        <div class="carousel-caption">
+                            <p class="animated fadeInRight">Professional Builder</p>
+                            <h1 class="animated fadeInLeft">We Build Your Home</h1>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/static/img/carousel-3.jpg" alt="Carousel Image">
+                        <div class="carousel-caption">
+                            <p class="animated fadeInRight">We Are Trusted</p>
+                            <h1 class="animated fadeInLeft">For Your Dream Home</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- Carousel End -->
+
+
+            <!-- Feature Start-->
+            <div class="feature wow fadeInUp" data-wow-delay="0.1s">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="flaticon-worker"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Expert Worker</h3>
+                                    <!-- <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="flaticon-building"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Quality Work</h3>
+                                    <!-- <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="flaticon-call"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>24/7 Support</h3>
+                                    <!-- <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature End-->
+
+
+            <!-- About Start -->
+            <div class="about wow fadeInUp" data-wow-delay="0.1s">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="about-img">
+                                <img src="/static/img/about.jpg" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                            <div class="section-header text-left">
+                                <p>Welcome to Builderz</p>
+                                <h2>25 Years Experience</h2>
+                            </div>
+                            <div class="about-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+
+            <!-- Fact Start -->
+            <div class="fact">
+                <div class="container-fluid">
+                    <div class="row counters">
+                        <div class="col-md-6 fact-left wow slideInLeft">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="fact-icon">
+                                        <i class="flaticon-worker"></i>
+                                    </div>
+                                    <div class="fact-text">
+                                        <h2 data-toggle="counter-up">109</h2>
+                                        <p>Expert Workers</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="fact-icon">
+                                        <i class="flaticon-building"></i>
+                                    </div>
+                                    <div class="fact-text">
+                                        <h2 data-toggle="counter-up">485</h2>
+                                        <p>Happy Clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 fact-right wow slideInRight">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="fact-icon">
+                                        <i class="flaticon-address"></i>
+                                    </div>
+                                    <div class="fact-text">
+                                        <h2 data-toggle="counter-up">789</h2>
+                                        <p>Completed Projects</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="fact-icon">
+                                        <i class="flaticon-crane"></i>
+                                    </div>
+                                    <div class="fact-text">
+                                        <h2 data-toggle="counter-up">890</h2>
+                                        <p>Running Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fact End -->
+
+
+            <!-- Service Start -->
+            <div class="service">
+                <div class="container-fluid">
+                    <div class="section-header text-center">
+                        <p>Our Services</p>
+                        <h2>We Provide Services</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="/static/img/service-1.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            Building construction is the assembly of structures for residential, commercial, or industrial use.
+                                             It encompasses design, site preparation, foundation creation, structural framework assembly, utility installation, and finish application. Using materials like concrete and steel, the process requires collaboration among architects, engineers, and laborers to meet safety standards and deliver functional, aesthetically pleasing buildings.                                        </p>
+                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <a class="btn" href="/static/img/service-1.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="/static/img/service-2.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            House renovation is the process of making significant improvements to an existing residential property, ranging from interior updates to structural modifications. It aims to enhance functionality, aesthetics, and overall value.   </p>                                 </div>
+                                </div>
+                                <div class="service-text">
+                                    <h3>House Renovation</h3>
+                                    <a class="btn" href="/static/img/service-2.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="/static/img/service-3.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            Architectural design is the creative and technical process of planning and conceptualizing buildings. It integrates principles of design, functionality, and aesthetics to create detailed plans for construction and development.                                        </p>
+                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <a class="btn" href="/static/img/service-3.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="/static/img/service-4.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            Interior design is the art of enhancing the aesthetic and functional aspects of interior spaces. It involves thoughtful selection of colors, furniture, lighting, and arrangements to create appealing and harmonious environments.                                        </p>
+                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <h3>Interior Design</h3>
+                                    <a class="btn" href="/static/img/service-4.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="/static/img/service-5.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            "Fixing and support" involves the installation and placement of structural components, fixtures, and support systems within a building to ensure stability, functionality, and safety.                                        </p>
+                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <h3>Fixing & Support</h3>
+                                    <a class="btn" href="/static/img/service-5.jpg" data-lightbox="service">+</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="service-item">
+                                <div class="service-img">
+                                    <img src="/static/img/service-6.jpg" alt="Image">
+                                    <div class="service-overlay">
+                                        <p>
+                                            Painting is the application of color or pigment to surfaces, enhancing aesthetics and providing protection. It involves surface preparation and the use of various techniques for both functional and decorative purposes.                                    </div>
+                                </div>
+                                <div class="service-text">
+                                    <h3>Painting</h3>
+                                    <a class="btn" href="/static/img/service-6.jpg" data-lightbox="service">+</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service End -->
+
+
+            <!-- Video Start -->
+            <div class="video wow fadeIn" data-wow-delay="0.1s">
+                <div class="container">
+                    <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>        
+                            <!-- 16:9 aspect ratio -->
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Video End -->
+
+
+
+            
+
+      
+
+         
+
+
+            <!-- Footer Start -->
+            <div class="footer wow fadeIn" data-wow-delay="0.3s" >
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-contact">
+                                <h2>Office Contact</h2>
+                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                                <p><i class="fa fa-phone-alt"></i>+91 9383 7382 93</p>
+                                <p><i class="fa fa-envelope"></i>Builderz@example.com</p>
+                                <div class="footer-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="footer-link">
+                                <h2>Services Areas</h2>
+                                <a href="">Building Construction</a>
+                                <a href="">House Renovation</a>
+                                <a href="">Architecture Design</a>
+                                <a href="">Interior Design</a>
+                                <a href="">Painting</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="footer-link">
+                                <h2>Useful Pages</h2>
+                                <a href="">About Us</a>
+                                <a href="">Contact Us</a>
+                                <a href="">Our Team</a>
+                                <a href="">Projects</a>
+                                <a href="">Testimonial</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3 !important">
+                            <div class="newsletter">
+                                <h2>Newsletter</h2>
+                                <p>
+                                </p>
+                                <div class="form">
+                                    <input class="form-control" placeholder="Email here">
+                                    <button class="btn">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid footer-menu">
+                    <div class="f-menu">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+                </div>
+                <div class="container-fluid copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
